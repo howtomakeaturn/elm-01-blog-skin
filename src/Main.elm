@@ -53,25 +53,16 @@ view model =
     , p [] [ text "Tony is a web developer based in Taiwan." ]
     , p [] [ text "Check the articles below to get more information." ]
     , hr [] []
-    , div []
-      [ a [ href "#post-3" ] [
-        h3 [ style "margin-bottom" "0.5rem" ] [ text "Get better in the #3 post." ]
-      ]
-      , div [] [ text "Author: Tony, Published: 2 days ago" ]
-      , div [ style "margin-top" "0.75rem" ] [ text "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged." ]
-      ]
-    , div []
-      [ a [ href "#post-2" ] [
-        h3 [ style "margin-bottom" "0.5rem" ] [ text "The #2 post is also good." ]
-      ]
-      , div [] [ text "Author: Tony, Published: 4 days ago" ]
-      , div [ style "margin-top" "0.75rem" ] [ text "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged." ]
-      ]
-    , div []
-      [ a [ href "#post-1" ] [
-        h3 [ style "margin-bottom" "0.5rem" ] [ text "My #1 blog post." ]
-      ]
-      , div [] [ text "Author: Tony, Published: 6 days ago" ]
-      , div [ style "margin-top" "0.75rem" ] [ text "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged." ]
-      ]
+    , postCard "Get better in the #3 post." "Author: Tony, Published: 2 days ago" "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged." "#post-3"
+    , postCard "The #2 post is also good." "Author: Tony, Published: 4 days ago" "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged." "#post-2"
+    , postCard "My #1 blog post." "Author: Tony, Published: 6 days ago" "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged." "#post-1"
+    ]
+
+postCard title info content url =
+  div []
+    [ a [ href url ] [
+      h3 [ style "margin-bottom" "0.5rem" ] [ text title ]
+    ]
+    , div [] [ text info ]
+    , div [ style "margin-top" "0.75rem" ] [ text content ]
     ]
