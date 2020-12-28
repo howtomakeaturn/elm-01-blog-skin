@@ -56,6 +56,8 @@ view model =
     , postCard "Get better in the #3 post." "Author: Tony, Published: 2 days ago" "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged." "/src/View.elm"
     , postCard "The #2 post is also good." "Author: Tony, Published: 4 days ago" "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged." "/src/View.elm"
     , postCard "My #1 blog post." "Author: Tony, Published: 6 days ago" "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged." "/src/View.elm"
+    , hr [ style "margin" "1.25rem 0" ] []
+    , a [ href "/src/Create.elm" ] [ text "+ New Post" ]
     ]
 postCard : String -> String -> String -> String -> Html Msg
 postCard title info content url =
